@@ -21,7 +21,7 @@
   document.body.appendChild( renderer.domElement );
 
   var camera = new THREE.PerspectiveCamera( 45, window.innerWidth / window.innerHeight, 1, 500 );
-camera.position.set( 1, 1, 100 );
+camera.position.set( 1, 1, 70 );
 camera.lookAt( 0, 0, 0 );
 
 var material = new THREE.LineBasicMaterial( { color: 0x0000ff } );
@@ -74,11 +74,10 @@ var line = new THREE.Line( geometry, material );
 var animate = function () {
       requestAnimationFrame( animate );
 
-      line.rotation.x += 0.005;
-      line.rotation.y += 1.0;
-			sphere.rotation.x += 10.01;
-				sphere.rotation.y += 0.01;
-				scene.add( sphere );
+      line.rotation.x += 0.00;
+      line.rotation.y += 0.0;
+			line.rotation.z += 0.50
+
       scene.add( line );
       renderer.render( scene, camera );
     };
